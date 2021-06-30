@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <link rel="stylesheet" type="text\css" href=malariacss.css/>
+  <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=r6cH14MNXskaSUfb9ho7Fi13AP4a38pjt93lLPjJ6DEyKjUUqg3BiaIGeqcpzDFzCd5J87qoilZ0SAdakd1TZbN8wuNhCg3AsaSy-zTcEcY-twEnzqiimnksR_zlSrES2B1YVKG7q5y1TMElvG5xd45hWo5mmVjU0dOGJULhT5YFQ4A2dJth5NF4VBNdyd652zvesOIS-nLJZIzz_MMQoUtLiMPHVi-7Yp1AE57McoJ44HgMA-P_gJz9kPDQ1_T9lS5FJrm2o4rnjB56vngKd6PLgXKN0a418TdF7XvpLEn_jHd-ikXiiS4445pMDIhZfJHvA6f7Ck6FBMcIwZodYllBTZYtJERdRfrQvPyLwIXyONmaPGfIN7kX9LQm1Ui8DgHIEsNctHzXj_DccY19d4UTNA2QskWlEmCQU9c-eAM-6f1VVbxvzfPKhHFPXEuLJI5Ionvu3eP_gCD014OSFAEdeV2kNC5VSUrghvJoiNWjQ2ZXNGz9LEjuu77GfcNVPeX_rFWhiGZxaLyF1ONARgxHanF0Za9BIYgKjj7toAqwADbZptvD4zfr0GcZyvmV0jYt24Dt4NRbB_Y6bmXpDR6upmdWs-bjz52Od3Dn9fMvUiF9AwhYVSkY8qCVOnViWz9u-GMr1TJ4FDURHiLe9u0OUsGNLcc4n9S5jv205S_-cwzTG8xV6yRRRVTuRKKioWZTx3ahlEXoeVvm89cSXfJ0hhDt9qx7Rkwf68vPnOMp6_3qnCy8IIQ-HuhMOHy1KQ4JlXbGvJUCXONTPH7OhdY7gnRFKe4uqyn4RbIOdPiyV9TFO2qge7Sa77QI74Q5RAxxpSNW1B4gHFL8u5ZDHGHAvoJ7alEb2Bh8RSWhQZPlqxF87HNmqvaQl3ecMTQaPJpOZJauBka3il20UMZsHAhiI2qWZSVwimgGluhO8A71sZCBo6RTO_gnx5O1IN6TXaM02cSshUpnddaec0oE63_y6Ig5T5bJb6upk_6qJHahztB4QCuDlgCsuE8tTcaVSLvhkj3MW15zwUG7EmmpDIF-IB0pAlkrVvCZHnH7IEQUlCY9IcKAAzR1KcR-zbIu2enkUxHO8hDD80narBZ9zdmZJjCT7z91K5nH0oP8vMofuvOAB1Vx7CUCXmjLJTSQ2MumR5YguWrPcUeCXUz3PlY6ZYpMCChCYOaVqhfHIGo" nonce="40d14358868ae077e6804fff06edccd1" charset="UTF-8"></script></head>
+  <body>
+  <div id="main">
+    <div id="heading">
+      <h1 >MALARIA DISEASE PREDICTION</h1>
+      </div>
+      <div id="description">
+        <p>To predict the probability of Malaria</p> 
+      </div><br><br>
+  
+    <div id="form">
+      <form action='/predict' method="post">
+        <div id="age">
+        <label for="Age">Enter your Age</label><br>
+        <input type="number"  id="Age" required >
+        </div><br>
+        <div id="Sex">
+        <label for="gender">Gender</label><br>
+        <input type="number" id="gender" placeholder=" enter 0 for female and 1 for male" min="0" max="1" required>
+        </div><br>
+        <div id="temp">
+        <label for="Temperature">Temperature in  Fahrenheit </label><br>
+        <input type="number" id="Temperature" required>
+        </div><br>
+        <div id="sbp">
+        <label for="systolic">Systolic blood pressure in MM/hg  </label><br>
+        <input type="number" id="systolic" required>
+        </div><br>
+        <div id="dbp">
+        <label for="diastolic">Diastolic blood pressure in MM/hg  </label><br>
+        <input type="number" id="diastolic" required>
+        </div><br>
+        <div id="HR">
+        <label for="heart_rate">Heart Rate in beats/min  </label><br>
+        <input type="number" id="heart_rate" required>
+        </div><br>
+        <div id="travel">
+        <label for="travel_history">Travel History to Malaria endemic areas such as shimoga and mangalore</label><br>
+        <input type="number" id="travel_history" placeholder="enter 1 for yes and 0 for no" min="0" max="1" required>
+        </div><br>
+        <div id="clinical1">
+        <label for="symptoms1">Severe fever with chills and sweating </label><br>
+        <input type="number"  id="symptoms1" placeholder="enter 1 for presence and 0 for absence" max="1" min="0" required>
+        </div><br>
+        <div id="clinical2">
+        <label for="symptoms2">Severe fatigue  with severe backpain/ Respiratory symptoms such dry coughand Nausea,vomitting ,abdominal pain </label><br>
+        <input type="number"  id="symptoms2" placeholder="enter 1 for presence and 0 for absence" max="1" min="0" required>
+        </div><br>
+        <div id="spleen">
+        <label for="abdominal_scan">Swelling near the pelvic region</label><br>
+        <input type="number"  id="abdominal_scan" placeholder="enter 1 for presence and 0 for absence" max="1" min="0" required>
+        </div><br>
+        <div id="clinical3">
+        <label for="test">Peripheral blood smear test </label><br>
+        <input type="number"  id="test" placeholder="enter 1 for presence of microscopy malaria parasites else 0 for absence" max="1" min="0" required>
+        </div><br>
+  <div id="button">
+    <button type="submit" id="b">Predict Probability</button>
+  </div>
+     </div>
+      </form>
+    </div>
+  <br>
+  <br>
+    </div>
+  <div>
+  {{pred}}
+  </div>
+  </body>
+</html>
