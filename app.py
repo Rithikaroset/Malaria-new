@@ -13,7 +13,7 @@ model_SVM = joblib.load('models/model_SVM1.pkl')
 
 @app.route('/')
 def hello_world():
-    return render_template("MALARIAF.html")
+    return render_template("malariahtml.html")
 
 @app.route('/predict',methods=['POST','GET'])
 def predict():
@@ -50,9 +50,9 @@ def predict():
     print('Final Prediction - Class {}'.format(output.argmax()))
 
     if output.argmax() == 1:
-        return render_template('MALARIAF.html', pred='Danger.\nProbability of occuring is {}'.format(output[output.argmax()]))
+        return render_template('malariahtml.html', pred='Danger.\nProbability of occuring is {}'.format(output[output.argmax()]))
     else:
-        return render_template('MALARIAF.html', pred='Safe.\n Probability of occuring is {}'.format(output[output.argmax()]))
+        return render_template('malariahtml.html', pred='Safe.\n Probability of occuring is {}'.format(output[output.argmax()]))
 
 if __name__=='__main__':
     app.run(debug = True, threaded = True)
